@@ -1,22 +1,21 @@
-# Breast Cancer Prediction
-**Breast Cancer Prediction** is a classification task aimed at predicting the diagnosis of a breast mass as either malignant or benign. The dataset used for this prediction consists of features computed from a digitized image of a fine needle aspirate (FNA) of the breast mass. These features describe various characteristics of the cell nuclei present in the image.
+# Red Wine Quality Prediction
+This data science project aims to predict the quality of red variants of the Portuguese "Vinho Verde" wine. The dataset consists of physicochemical (input) and sensory (output) variables, with no information about grape types, wine brand, or selling price due to privacy and logistic constraints.
 
-The dataset contains the following information for each instance:
-
-1. ID number: A unique identifier for each sample.
-2. Diagnosis: The target variable indicating the diagnosis, where 'M' represents malignant and 'B' represents benign.
-
-For each cell nucleus, ten real-valued features are computed, which are:
-
-1. Radius: The mean distance from the center to points on the perimeter of the nucleus.
-2. Texture: The standard deviation of gray-scale values in the nucleus.
-3. Perimeter: The perimeter of the nucleus.
-4. Area: The area of the nucleus.
-5. Smoothness: A measure of local variation in radius lengths.
-6. Compactness: Computed as the square of the perimeter divided by the area minus 1.0.
-7. Concavity: Describes the severity of concave portions of the nucleus contour.
-8. Concave points: Represents the number of concave portions of the nucleus contour.
-9. Symmetry: Measures the symmetry of the nucleus.
-10. Fractal dimension: This feature approximates the "coastline" of the nucleus, using the concept of fractal geometry.
-
-These features provide quantitative measurements that can be used to assess the characteristics of cell nuclei and aid in distinguishing between malignant and benign breast masses. By training a machine learning model on this dataset, it is possible to develop a predictive model that can assist in the early detection and diagnosis of breast cancer.
+The dataset can be approached as either a classification or regression task. The quality scores are ordered and not evenly distributed, meaning there are significantly more normal wines than excellent or poor ones.
+## Dataset Information
+The dataset used in this project is sourced from the UCI Machine Learning Repository and is also available for convenience on Kaggle. However, if there are any licensing concerns, the dataset will be promptly removed upon request. Additional details can be found in the reference [Cortez et al., 2009].
+## Input Variables (Physicochemical Tests)
+1. Fixed acidity
+2. Volatile acidity
+3. Citric acid
+4. Residual sugar
+5. Chlorides
+6. Free sulfur dioxide
+7. Total sulfur dioxide
+8. Density
+9. pH
+10. Sulphates
+11. Alcohol
+## Output Variable (Sensory Data)
+1. Quality (score between 0 and 10)
+For further insights and analysis, refer to the research paper by Cortez et al. (2009). This project aims to leverage machine learning techniques to build a predictive model that can estimate the quality of red wines based on their physicochemical properties and sensory attributes.

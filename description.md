@@ -1,29 +1,43 @@
-# Belarus Car Price Prediction
-![](https://i0.wp.com/bestsellingcarsblog.com/wp-content/uploads/2020/01/Geely-Atlas-Belarus-2019.jpg?fit=600%2C400&ssl=1)
-## Project Overview:
-The Belarus Car Price Prediction project aims to forecast the prices of cars in Belarus by leveraging a dataset containing essential car features. These features include the make, model, year of production, condition, mileage, fuel type, engine volume, color, transmission type, drive unit, and segment. With a total of 56,244 rows and 12 columns, this project seeks to identify the key variables that have the most significant impact on car prices within the Belarusian market.
+# Cardiovascular Disease Prediction
 
-## Data Dictionary:
+![](https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/002/508/249/datas/original.png)
 
-| Variable        | Description                                                |
-|-----------------|------------------------------------------------------------|
-| make            | Machine firm or car manufacturer                           |
-| model           | Machine model                                              |
-| price USD       | Price in USD (target variable)                             |
-| year            | Year of production                                         |
-| condition       | Represents the condition at the sale moment                |
-| mileage         | Mileage in kilometers                                      |
-| fuel type       | Type of fuel (electro, petrol, diesel)                     |
-| volume(cm3)     | Volume of the engine in cubic centimeters                  |
-| color           | Color of the car                                           |
-| transmission    | Type of transmission                                       |
-| drive unit      | Drive unit                                                 |
-| segment         | Segment of the car                                         |
+## Project Overview
+The **Cardiovascular Disease Prediction** project aims to predict the occurrence of cardiovascular disease in patients based on their medical records and history. By analyzing various factors, the project calculates the probability of cardiovascular disease developing in a patient. This predictive model is a valuable tool in identifying individuals who are at higher risk and enabling early intervention.
 
-## Impact:
-Through exploratory data analysis, several key insights were discovered. Notably, there was a significant increase in car prices in Belarus after the year 2000. Cars running on petrol with automatic transmission tend to have higher prices compared to diesel cars with manual transmission. Electric cars stand out as notably more expensive than other car types. Furthermore, cars with all-wheel drive exhibit the highest prices among all drive units, and speciality segment cars command the highest prices among all segments, followed by luxury European, American, and Asian car segments.
+## Data Dictionary
+The project utilizes a comprehensive dataset with the following features:
 
-For the predictive modeling, a decision tree regressor was employed to forecast car prices. This model achieved an impressive accuracy rate of 85.29%. The most influential features in predicting car prices were identified as the year of production and the engine's volume in cubic centimeters.
+| Feature                    | Description                                       |
+|---------------------------|---------------------------------------------------|
+| General Health            | General health condition of the patient.          |
+| Checkup                   | Date of the patient's last medical checkup.       |
+| Exercise                  | Whether the patient engages in regular exercise.  |
+| Heart Disease             | Presence of existing heart disease in the patient.|
+| Skin Cancer               | Presence of skin cancer in the patient.           |
+| Other Cancer              | Presence of other types of cancer in the patient. |
+| Depression               | Presence of depression in the patient.           |
+| Diabetes                  | Presence of diabetes in the patient.              |
+| Arthritis                 | Presence of arthritis in the patient.             |
+| Sex                       | Gender of the patient.                           |
+| Age-Category              | Age category of the patient.                     |
+| BMI                       | Body Mass Index of the patient.                  |
+| Smoking History           | Patient's history of smoking.                    |
+| Alcohol Consumption       | Patient's alcohol consumption habits.            |
+| Fruit Consumption         | Patient's consumption of fruits.                 |
+| Green Vegetable Consumption | Patient's consumption of green vegetables.    |
+| Fried Potato Consumption | Patient's consumption of fried potatoes.         |
 
-This project offers valuable insights for both car buyers and sellers in Belarus, helping them make informed decisions in a dynamic automotive market.
+## Impact
+Through thorough exploratory data analysis, significant insights were revealed about the factors contributing to cardiovascular disease:
 
+- Age plays a crucial role, with individuals above the age of 55 being more prone to cardiovascular disease. The risk escalates with age, reaching a peak in patients aged 80 and above.
+- Higher BMI is correlated with an increased likelihood of cardiovascular disease.
+- Surprisingly, exercise can have varying effects based on age. While exercise generally reduces risk, older patients who exercise extensively might face elevated risks due to increased heart strain.
+- Dietary habits significantly influence the disease. Patients consuming more fruits and green vegetables exhibit lower susceptibility to cardiovascular disease, while those consuming fried potatoes are more prone.
+- Smoking history is a notable risk factor.
+- Intriguingly, medical history concerning cancer, arthritis, diabetes, and depression showed no significant impact on cardiovascular disease risk.
+
+This project's predictions and insights empower healthcare professionals to identify high-risk patients and implement preventive measures, ultimately reducing the prevalence of cardiovascular disease.
+
+In conclusion, the Cardiovascular Disease Prediction project underscores the importance of data-driven approaches in healthcare, aiding in the proactive management of patients' cardiovascular health.

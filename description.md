@@ -1,47 +1,45 @@
-# Telecom Customer Churn Prediction
-![](https://miro.medium.com/v2/resize:fit:795/0*8Iu_eymr6eR-YuQw)
-## Project Overview:
+# Warranty Claims Fraud Prediction
+![](https://trendsettertelugu.com/wp-content/uploads/2022/12/File-a-warranty-claim.webp)
+## Project Overview
+The aim of this data science project is to predict the authenticity of warranty claims by analyzing various factors such as region, product category, claim value, and more. The dataset used for this project was sourced from Kaggle and comprises 358 rows and 21 columns.
 
-The aim of this data science project is to analyze customer demographics, services, tenure, and other variables to predict whether a particular customer will churn or not. Churn, in this context, refers to customers leaving the telecommunications company's services. By understanding the factors that contribute to churn, the company can take proactive measures to retain customers.
+## Data Dictionary
+| Column Name         | Description                                     |
+|---------------------|-------------------------------------------------|
+| Unnamed: 0          | Index                                           |
+| Region              | Region of the claim                             |
+| State               | State of the claim                              |
+| Area                | Area of the claim                               |
+| City                | City of the claim                               |
+| Consumer_profile    | Consumer profile (Business/Personal)            |
+| Product_category    | Product category (Household/Entertainment)      |
+| Product_type        | Product type (AC/TV)                            |
+| AC_1001_Issue       | Issue with AC component 1 (0 - No issue/No component, 1 - repair, 2 - replacement) |
+| AC_1002_Issue       | Issue with AC component 2 (0 - No issue/No component, 1 - repair, 2 - replacement) |
+| AC_1003_Issue       | Issue with AC component 3 (0 - No issue/No component, 1 - repair, 2 - replacement) |
+| TV_2001_Issue       | Issue with TV component 1 (0 - No issue/No component, 1 - repair, 2 - replacement) |
+| TV_2002_Issue       | Issue with TV component 2 (0 - No issue/No component, 1 - repair, 2 - replacement) |
+| TV_2003_Issue       | Issue with TV component 3 (0 - No issue/No component, 1 - repair, 2 - replacement) |
+| Claim_Value         | Claim value in INR                              |
+| Service_Center      | Service center code                             |
+| Product_Age         | Product age in days                             |
+| Purchased_from      | Purchased from (Dealer, Manufacturer, Internet) |
+| Call_details        | Call duration                                   |
+| Purpose             | Purpose of the call                             |
+| Fraud               | Fraudulent (1) or Genuine (0) Conclusion       |
 
-## Data Dictionary:
+## Conclusion
+From the exploratory data analysis, it was found that:
+- Warranty claims are most frequent in the southern region of India, particularly in Andhra Pradesh and Tamil Nadu.
+- Fraudulent claims are more common in urban regions such as Hyderabad and Chennai.
+- The dataset includes claims for two products: TVs and ACs. TVs have higher warranty claims when purchased for personal use compared to ACs.
+- Fraudulent claims for ACs occur even when there are no issues with the AC parts.
+- Fraudulent claims for TVs can occur with or without issues in the TV parts.
+- Fraudulent claims are more frequent when purchases are made through the manufacturer.
+- Fraudulent claims tend to have higher claim values compared to genuine claims.
+- Service center 13 had the highest number of fraudulent claims despite having fewer total warranty claims.
+- Fraudulent claims are more frequent when the customer care call duration is less than 3-4 minutes.
 
-Here is a data dictionary describing the variables used in this project:
+Machine learning models, including Decision Tree Classifier, Random Forest Classifier, and Logistic Regression, were employed for prediction. These models achieved excellent accuracy levels of 91-92%. However, due to the limited number of fraudulent claims and a small dataset size, the models exhibited lower recall scores for fraudulent claims. This issue can be mitigated by collecting more data.
 
-| Variable         | Description                                                |
-|------------------|------------------------------------------------------------|
-| CustomerID       | Unique customer ID                                         |
-| Gender           | Customer's gender                                          |
-| SeniorCitizen    | Whether the customer is a senior citizen or not (1, 0)     |
-| Partner          | Whether the customer has a partner or not (Yes, No)        |
-| Dependents       | Whether the customer has dependents or not (Yes, No)       |
-| Tenure           | Number of months the customer has stayed with the company  |
-| PhoneService     | Whether the customer has a phone service or not (Yes, No)  |
-| MultipleLines    | Whether the customer has multiple lines or not (Yes, No, No phone service) |
-| InternetService  | Customer’s internet service provider (DSL, Fiber optic, No) |
-| OnlineSecurity   | Whether the customer has online security or not (Yes, No, No internet service) |
-| OnlineBackup     | Whether the customer has online backup or not (Yes, No, No internet service) |
-| DeviceProtection | Whether the customer has device protection or not (Yes, No, No internet service) |
-| TechSupport      | Whether the customer has tech support or not (Yes, No, No internet service) |
-| StreamingTV      | Whether the customer has streaming TV or not (Yes, No, No internet service) |
-| StreamingMovies  | Whether the customer has streaming movies or not (Yes, No, No internet service) |
-| Contract         | The contract term of the customer (Month-to-month, One year, Two years) |
-| PaperlessBilling | Whether the customer has paperless billing or not (Yes, No) |
-| PaymentMethod    | The customer’s payment method (Electronic check, Mailed check, Bank transfer (automatic), Credit card (automatic)) |
-| MonthlyCharges   | The amount charged to the customer monthly |
-| TotalCharges     | The total amount charged to the customer |
-| Churn            | Whether the customer churned or not (Yes or No) |
-
-## Conclusion:
-
-From the exploratory data analysis, several insights have been derived:
-
-- Senior citizens exhibit a lower churn rate compared to younger customers.
-- Customers who are single or do not have dependents tend to have a higher churn rate.
-- Customers generally express higher satisfaction with streaming services compared to services like online backup and device protection, resulting in a lower churn rate for streaming services.
-- Tenure has an inverse relationship with churn rate, with customers having a tenure shorter than 5 months having a higher churn rate.
-- Customers with month-to-month contracts are more likely to churn compared to those with one or two-year contracts, indicating that longer contract durations are associated with lower churn.
-- Customers with higher monthly charges and lower total charges are more likely to churn, suggesting that the company should consider reducing monthly charges to mitigate churn.
-- The most important features for predicting customer churn, as determined by feature importance, include tenure, contract type, monthly charges, and total charges.
-
-Machine learning models, including Decision Tree Classifier, Random Forest Classifier, and K Nearest Neighbors Classifier, were employed in this project. The Random Forest Classifier demonstrated the highest accuracy of 82%, along with a high F1 Score and the lowest mean squared error and mean absolute error. Therefore, the Random Forest Classifier is recommended as a suitable model for predicting customer churn in this telecom company's dataset.
+This project holds the potential to assist in identifying and preventing warranty claims fraud, thereby saving resources and enhancing the efficiency of warranty claim processing.

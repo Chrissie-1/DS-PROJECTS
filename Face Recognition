@@ -1,0 +1,90 @@
+Face Recognition
+
+Face Recognition - Deep Learning Based Facial Analysis Suite
+A lightweight yet powerful Python library for face detection, facial landmarking, and identity recognition.
+Built and maintained by Chrissie Raj. Powered by dlib and deep learning models with 99.38% accuracy on the LFW benchmark.
+________________________________________
+Key Features
+•	Face Detection — Locate all faces in an image
+•	Facial Landmark Extraction — Detect eyes, nose, mouth, and jawline
+•	Identity Matching — Compare known vs unknown faces
+•	Command-Line Tools — Run face recognition directly from terminal
+•	GPU-accelerated Option — Faster recognition with CNN models
+________________________________________
+Quick Start
+import face_recognition
+
+# Load and detect faces
+image = face_recognition.load_image_file("your_file.jpg")
+face_locations = face_recognition.face_locations(image)
+
+# Facial landmarks
+landmarks = face_recognition.face_landmarks(image)
+
+# Face recognition
+known_img = face_recognition.load_image_file("known.jpg")
+unknown_img = face_recognition.load_image_file("unknown.jpg")
+
+known_enc = face_recognition.face_encodings(known_img)[0]
+unknown_enc = face_recognition.face_encodings(unknown_img)[0]
+
+results = face_recognition.compare_faces([known_enc], unknown_enc)
+________________________________________
+Installation
+Recommended
+pip install face_recognition
+Docker (GPU or CPU)
+docker-compose up --build
+Platform-specific Setup
+•	Mac/Linux dlib build
+•	Jetson Nano
+•	Raspberry Pi
+•	Windows Guide
+________________________________________
+CLI Tools
+Face Recognition
+face_recognition ./known/ ./unknown/
+Outputs CSV: filename,identified_person
+Face Detection
+face_detection ./images/
+Returns bounding box coordinates: top,right,bottom,left
+Sensitivity Control
+face_recognition --tolerance 0.5 ./known/ ./unknown/
+Multithreading (speedup)
+face_recognition --cpus 4 ./known/ ./unknown/
+________________________________________
+Use Cases
+Domain	Application
+Security	Surveillance, access control
+Healthcare	Patient verification
+Retail	Customer profiling, footfall analysis
+Smart Devices	Facial login, personalization
+Education	Attendance tracking
+________________________________________
+Contribute
+•	Contributions welcome via PR
+•	Issues tracked in GitHub
+•	Translations supported via .md variants
+________________________________________
+Known Limitations
+•	Lower accuracy on children
+•	Potential bias across ethnic groups (Read more)
+________________________________________
+Deployment
+Container-ready via Dockerfile and docker-compose.yml. Compatible with Heroku, AWS ECS, and GCP Cloud Run.
+GPU support via nvidia-docker requires:
+•	NVIDIA drivers >= 384.81
+•	Uncomment Dockerfile.gpu and runtime: nvidia
+________________________________________
+References & Articles
+•	Face Recognition with Deep Learning
+•	Clustering Faces
+•	Deploying on Raspberry Pi
+________________________________________
+Acknowledgements
+•	Huge thanks to Davis King for building dlib
+•	The Python ecosystem (NumPy, Pillow, OpenCV)
+•	Community contributors worldwide
+________________________________________
+License
+MIT License. See LICENSE file for full terms.
